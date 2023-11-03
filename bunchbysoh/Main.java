@@ -17,11 +17,11 @@ public class Main {
       float SoH=0;
       SoH=100*presentCapacities[i]/rated_capacity;
       if(SoH>80 && SoH<=100)
-        healthy++; //if SoH is between 80% and 100% increment count of healthy
+        counts.healthy++; //if SoH is between 80% and 100% increment count of healthy
       else if(SoH>62 && SoH<=80)
-        exchange++; //if SoH is between 62% and 80% increment count of exchange
+        counts.exchange++; //if SoH is between 62% and 80% increment count of exchange
       else
-        failed++; //increment count of failed if it is less than 62%
+        counts.failed++; //increment count of failed if it is less than 62%
     }
     
     return counts;
